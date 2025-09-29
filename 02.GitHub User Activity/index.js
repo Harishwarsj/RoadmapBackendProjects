@@ -1,7 +1,7 @@
-const { act } = require("react");
+
 
 async function fetchGitHubUserActivity(username) {
-
+    console.log(username);
     const response = await fetch(`https://api.github.com/users/${username}/events/public`,
         {
             headers: {
@@ -10,13 +10,14 @@ async function fetchGitHubUserActivity(username) {
             }
         }
     );
-
+    console.log(response);
     if (!response.ok) {
         if (response.status === 404) {
             throw new Error(`User ${username} not found`);
+
+        } else {
+            throw new Error(`Error fetching data: ${response.status} ${response.statusText}`);
         }
-    } else {
-        throw new Error(`Error fetching data: ${response.status} ${response.statusText}`);
     }
 
     return response.json();
@@ -65,7 +66,9 @@ if (!username) {
 
 fetchGitHubUserActivity(username)
     .then((events) => {
+        console.log('Fetching activity for user:', username)
         displayUserActivity(events);
+
     })
     .catch((error) => {
         console.error('Error:', error.message);
