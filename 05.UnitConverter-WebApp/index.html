@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Unit Converter - Web App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="webapp.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="dropdown">
+            <label for="Unit">Choose the Unit Converter:</label>
+            <select id="Unit" onchange="showText()">
+                <option value="Length">Length</option>
+                <option value="Weight">Weight</option>
+                <option value="Temperature">Temperature</option>
+            </select>
+        </div>
+
+        <label for="input-Value" id="showText">Enter Length to convert:</label>
+
+        <input type="number" id="input-Value" placeholder="Enter value" oninput="checkfromto()" onchange="process()">
+
+        <div class="Length">
+            <label for="Unit-From-length">From</label>
+            <select id="Unit-From-length" onchange="process()">
+                <option value="Millimeter">Millimeter</option>
+                <option value="Mile">Mile</option>
+                <option value="Meter">Meter</option>
+                <option value="Kilometer">Kilometer</option>
+                <option value="Inch">Inch</option>
+                <option value="Foot">Foot</option>
+                <option value="Yard">Yard</option>
+            </select>
+            <label for="Unit-To-length">To</label>
+            <select id="Unit-To-length" onchange="process()">
+                <option value="Millimeter">Millimeter</option>
+                <option value="Mile">Mile</option>
+                <option value="Meter">Meter</option>
+                <option value="Kilometer">Kilometer</option>
+                <option value="Inch">Inch</option>
+                <option value="Foot">Foot</option>
+                <option value="Yard">Yard</option>
+            </select>
+        </div>
+        <div class="Weight" hidden>
+            <label for="Unit-From-weight">From</label>
+            <select id="Unit-From-weight" onchange="process()">
+                <option value="Milligram">Milligram</option>
+                <option value="Gram">Gram</option>
+                <option value="Kilogram">Kilogram</option>
+                <option value="Ounce">Ounce</option>
+                <option value="Pound">Pound</option>
+            </select>
+            <label for="Unit-To-weight">To</label>
+            <select id="Unit-To-weight" onchange="process()">
+                <option value="Milligram">Milligram</option>
+                <option value="Gram">Gram</option>
+                <option value="Kilogram">Kilogram</option>
+                <option value="Ounce">Ounce</option>
+                <option value="Pound">Pound</option>
+            </select>
+        </div>
+        <div class="Temperature" hidden>
+            <label for="Unit-From-temperature">From</label>
+            <select id="Unit-From-temperature" onchange="process()">
+                <option value="Celsius">Celsius</option>
+                <option value="Fahrenheit">Fahrenheit</option>
+                <option value="Kelvin">Kelvin</option>
+            </select>
+            <label for="Unit-To-temperature">To</label>
+            <select id="Unit-To-temperature" onchange="process()">
+                <option value="Celsius">Celsius</option>
+                <option value="Fahrenheit">Fahrenheit</option>
+                <option value="Kelvin">Kelvin</option>
+            </select>
+        </div>
+        <div class="result">
+            <label for="result-value">Result:</label>
+            <input type="number" id="result-value" placeholder="Value is" readonly>
+        </div>
+    </div>
+</body>
+
+</html>
