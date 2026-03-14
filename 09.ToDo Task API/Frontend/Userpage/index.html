@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List - Login Page</title>
+    <link rel="stylesheet" href="./user.css">
+      <script src="user.js" defer></script>
+
+</head>
+
+<body>
+    <div class="choose">
+        <button id="loginBtn" onclick="displayLogin()">Login</button>
+        <button id="SignupBtn" onclick="displaySignup()">Signup</button>
+    </div>
+
+    <div class="form loginForm" hidden>
+        <form method="post" id="loginForm" onsubmit="validateLogin()">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button id="loginWithUser" type="submit">Login</button>
+        </form>
+    </div>
+    <div class="form signupForm" hidden>
+        <form id="signupForm" onsubmit="validateSignUp(event)"> 
+            <label for="newUsername">Username:</label>
+            <input type="text" id="newUsername" name="newUsername" required>
+            <label for="newPassword">Password:</label>
+            <input type="password" id="newPassword" name="newPassword" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <button id="signUpWithUser"  type="submit">Signup</button>
+        </form>
+    </div>
+</body>
+  
+</html>

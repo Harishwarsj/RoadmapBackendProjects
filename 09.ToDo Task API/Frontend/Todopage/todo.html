@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Todo App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="todo.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>📝 My Todo App</h1>
+
+        <button class="btn create" onclick="showCreate()">Create Todo</button>
+        <button class="btn get" onclick="showGet()">Get Todos</button>
+        <button class="btn delete" onclick="showDelete()">Delete Todo</button>
+        <div id="createSection" class="section">
+            <form class="todoForm" onsubmit="createTodo()">
+                <div class="todo-form">
+                    <input type="text" id="title" placeholder="Enter Title">
+                    <textarea id="description" placeholder="Enter Description"></textarea>
+                    <button id="addBtn" type="button" onclick="createTodo()">Create Todo Task</button>
+                    <!-- <button id="getBtn" type="button" onclick="loadTodos()">Get Todos</button> -->
+                </div>
+            </form>
+        </div>
+
+
+        <div id="getSection" class="section">
+            <ul id="list"></ul>
+        </div>
+        <div id="deleteSection" class="section">
+            <input type="text" id="todoId" placeholder="Enter Todo ID">
+            <button class="btn delete" onclick="deleteTodo()">Delete Todo</button>
+        </div>
+        <div class="todo-list" id="todoList"></div>
+    </div>
+
+    <script src="todo.js"></script>
+</body>
+
+</html>

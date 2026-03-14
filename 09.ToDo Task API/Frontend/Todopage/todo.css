@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: white;
+    width: 420px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.todo-form , #todoForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+    height: 70px;
+}
+.btn{
+width:100%;
+padding:12px;
+margin-top:10px;
+border:none;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+color:white;
+}
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #2575fc;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1b5edc;
+}
+
+.todo-list {
+    margin-top: 20px;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.todo-item {
+    background: #f4f4f4;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.todo-item.completed {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+.todo-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.todo-actions {
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.small-btn {
+    padding: 5px 8px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.delete-btn {
+    background: #ff4d4d;
+}
+
+.delete-btn:hover {
+    background: #e60000;
+}
+
+.complete-btn {
+    background: #28a745;
+}
+
+.complete-btn:hover {
+    background: #1e7e34;
+}
+
+.section{
+display:none;
+margin-top:20px;
+}
+
+.create{background:#2e6de6;}
+.get{background:#2e6de6;}
+.delete{background:#e63946;}
+
+input, textarea{
+width:100%;
+padding:12px;
+margin-top:10px;
+border-radius:8px;
+border:1px solid #ccc;
+}
